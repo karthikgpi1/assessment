@@ -11,7 +11,6 @@ import { IoMailOutline } from "react-icons/io5";
 import { CgMenuBoxed } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import Header from "../header/Header";
 import pic from "../../Assets/profile-pic-01.jpg";
 
 const Sidebar = () => {
@@ -63,6 +62,7 @@ const Sidebar = () => {
               <Link to="/inbox" className="nav-link">
                 <IoMailOutline className=" nav-link-icon" />
                 <span className="nav-link-name">Inbox</span>
+                <span className="nav-new">new</span>
               </Link>
               <Link to="/products" className="nav-link">
                 <CgMenuBoxed className=" nav-link-icon" />
@@ -76,30 +76,6 @@ const Sidebar = () => {
           </div>
         </nav>
       </aside>
-
-      {/* <h1>Content</h1> */}
-
-      {/* <div>
-        <div className="header">
-          <div className="leftTerms">
-            <div className="searchArea">
-              <AiOutlineSearch className="searchIcon" />
-              <input
-                type="text"
-                className="search"
-                placeholder="Search transactions, invoices or help"
-              />
-            </div>
-          </div>
-
-          <div className="rightTerms">
-            <IoMdNotificationsOutline className="notification" />
-            <h1>John Doe</h1>
-            <FiChevronDown className="downIcon" />
-            <img src={pic} alt="profile" />
-          </div>
-        </div>
-      </div> */}
     </main>
   );
 };

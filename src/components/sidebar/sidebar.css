@@ -169,6 +169,20 @@ img{
     color: var(--white-color);
     letter-spacing: 7px;
   }
+
+  .nav-new{
+    position: absolute;
+    align-items: center;
+    right: 20px;
+    top: 10px;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: red;
+    padding: 1px 6px;
+    height: 16px;
+    width: 35px;
+    border-radius: 8px;
+  }
   
   .nav-link {
     position: relative;
