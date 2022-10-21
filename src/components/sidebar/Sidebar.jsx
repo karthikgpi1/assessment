@@ -10,8 +10,8 @@ import { BsFileBarGraph } from "react-icons/bs";
 import { IoMailOutline } from "react-icons/io5";
 import { CgMenuBoxed } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
 import pic from "../../Assets/profile-pic-01.jpg";
+import Areachart from "../Charts/Areachart";
 
 const Sidebar = () => {
   const [show, setShow] = useState(false);
@@ -76,6 +76,26 @@ const Sidebar = () => {
           </div>
         </nav>
       </aside>
+      <div className={`test ${show ? "space-toggle" : null}`}>
+        <span>
+          <h1>Overview</h1>
+        </span>
+        <span>
+          <button>Add funds</button>
+        </span>
+      </div>
+      <div className={`grid ${show ? "space-toggle" : null}`}>
+        <div className="grid1">
+          <div>sdnvhfbvhfhvehfrgvgr</div>
+          <div>sdnvhfbvhfhvehfrgvgr</div>
+        </div>
+        <div className="grid2">
+          <Areachart />
+        </div>
+        <div className="grid3">sdnvhfbvhfhvehfrgvgr4</div>
+        <div className="grid4">sdnvhfbvhfhvehfrgvgrsdbhdkhbhksdbvhk3</div>
+        <div className="grid5">sdnvhfbvhfhvehfrgvgr5</div>
+      </div>
     </main>
   );
 };
