@@ -32,9 +32,9 @@ export default function Areachart() {
                 return new Date(timestamp).toDateString();
               },
             },
-            svg: {
-              filename: undefined,
-            },
+            // svg: {
+            //   filename: undefined,
+            // },
             png: {
               filename: undefined,
             },
@@ -73,7 +73,7 @@ export default function Areachart() {
         options={data.options}
         series={data.series}
         type="area"
-        // width="500"
+        width={377}
       />
     </div>
   );

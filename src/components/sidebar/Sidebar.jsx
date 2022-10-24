@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./sidebar.css";
 import { Link } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { FiChevronDown } from "react-icons/fi";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { RiHomeLine } from "react-icons/ri";
@@ -12,9 +12,18 @@ import { CgMenuBoxed } from "react-icons/cg";
 import { IoSettingsOutline } from "react-icons/io5";
 import pic from "../../Assets/profile-pic-01.jpg";
 import Areachart from "../Charts/Areachart";
-
+import DonutChart from "../Charts/DonutChart";
+import { TableDatas } from "../Table/TableDatas";
+import VideoFile from "../video/VideoFile";
+import Profile from "../Profile/Profile";
+import NotificationInfo from "../NotificationInfo/NotificationInfo";
+import Settings from "../Settings/Settings";
 const Sidebar = () => {
   const [show, setShow] = useState(false);
+  const [showSettings, setShowSettings] = useState(true);
+  const [showUpIcon, setShowUpIcon] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
+  const [showActiveNotification, setShowActiveNotification] = useState(true);
 
   return (
     <main className={show ? "space-toggle" : null}>
@@ -35,10 +44,28 @@ const Sidebar = () => {
 
         <div>
           <div className="rightTerms">
-            <IoMdNotificationsOutline className="notification" />
-            <h1>John Doe</h1>
-            <FiChevronDown className="downIcon" />
-            <img src={pic} alt="profile" />
+            <IoMdNotificationsOutline
+              className="notification"
+              onClick={() => {
+                setShowNotification(!showNotification);
+                setShowActiveNotification(!showNotification);
+              }}
+            />
+            <div
+              className={`activeNotification ${
+                showActiveNotification ? "block" : "ActiveShowNotification"
+              }`}
+            ></div>
+            <h1 className="ProName">John Doe</h1>
+            <FiChevronDown
+              className={`downIcon ${showUpIcon ? "Rotate" : null}`}
+              onClick={() => {
+                setShowSettings(!showSettings);
+                setShowUpIcon(!showUpIcon);
+              }}
+            />
+            <FiChevronUp className="UpIcon" />
+            <img className="userProfile" src={pic} alt="profile" />{" "}
           </div>
         </div>
       </header>
@@ -76,25 +103,61 @@ const Sidebar = () => {
           </div>
         </nav>
       </aside>
-      <div className={`test ${show ? "space-toggle" : null}`}>
-        <span>
-          <h1>Overview</h1>
-        </span>
-        <span>
-          <button>Add funds</button>
-        </span>
-      </div>
-      <div className={`grid ${show ? "space-toggle" : null}`}>
-        <div className="grid1">
-          <div>sdnvhfbvhfhvehfrgvgr</div>
-          <div>sdnvhfbvhfhvehfrgvgr</div>
+      <div className={`home ${show ? "space-toggle1" : null}`}>
+        <div
+          className={`notificationInfo ${
+            showNotification ? "activeNotifications" : "none"
+          }`}
+        >
+          <NotificationInfo />
+          <div className="ShowMore">Show More</div>
         </div>
-        <div className="grid2">
-          <Areachart />
+        <div
+          className={`Psettings ${showSettings ? "activeSettings" : "none"}`}
+        >
+          <Settings />
         </div>
-        <div className="grid3">sdnvhfbvhfhvehfrgvgr4</div>
-        <div className="grid4">sdnvhfbvhfhvehfrgvgrsdbhdkhbhksdbvhk3</div>
-        <div className="grid5">sdnvhfbvhfhvehfrgvgr5</div>
+        <div className={`test ${show ? "" : null}`}>
+          <span>
+            <h2>Overview</h2>
+          </span>
+          <span className="Button">
+            <button>Add Funds </button>
+            <div className="plus">+</div>
+          </span>
+        </div>
+        <div className="grid">
+          <div className="grid1">
+            <div className="areaText">
+              <h1 className="statistics">Statistics</h1>
+              <div className="months">
+                <h3 className="month">Last 6 months</h3>
+                <FiChevronDown className="DownIcon1" />
+              </div>
+            </div>
+            <Areachart />
+          </div>
+          <div className="grid2">
+            <div className="areaText">
+              <h1 className="salesDistribution">Sales Distribution</h1>
+            </div>
+            <DonutChart />
+          </div>
+          <div className="grid3">
+            <Profile />
+          </div>
+          <div className="grid4">
+            <TableDatas />
+          </div>
+
+          <div className="grid5">
+            <div>
+              <div className="videoFile">
+                <VideoFile />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );

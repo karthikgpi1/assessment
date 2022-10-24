@@ -1,0 +1,156 @@
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    /* margin: 5px; */
+}
+
+.profile{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.profilepic{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profileImage{
+    position: relative;
+}
+.editMain{
+    position:absolute;
+    left: 215px;
+    top: 0px;
+}
+
+.edit{
+    position: absolute;
+    top: 45.5px;
+    right: 153px;
+    /* background: #6763E3; */
+    color: #ffff;
+    font-size: 5px;
+    width: 12px;
+    height: 12px;
+   
+
+
+}
+
+.edit1{
+    position: absolute;
+    top: 43px;
+    right: 150px;
+    background: #6763E3;
+  
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+}
+
+
+.Pnames{
+    font-size: 16px;
+    color: #323548;
+    padding-top: 5px;
+margin-bottom: 5px;
+
+}
+
+.Cnames{
+    font-size: 10px;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #4D4F5C;
+margin-bottom: 10px;
+
+}
+
+.icons{
+    font-size: 15px;
+    color: #4D4F5C;
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+
+    
+}
+
+.userTag{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.Ousers{
+    font-size: 18px;
+}
+
+.users{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.user1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+.user2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.user3{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    /* margin-bottom: 8px; */
+    cursor: pointer;
+
+}
+
+
+.userImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.name{
+    font-size: 16px;
+    color: #4D4F5C;
+}
+
+.country{
+    font-size: 10px;
+    color:#4D4F5C
+}
+
+.mobile{
+    font-size: 10px;
+    color: #4D4F5C;
+}
