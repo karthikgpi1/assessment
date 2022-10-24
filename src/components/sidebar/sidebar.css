@@ -509,18 +509,15 @@ padding-right: 70px;
 
 
 .videoFile{
- 
+ position: relative;
   width:387px;
   height: 200px;
+  left: 10px;
 
 }
 
 .thumb{
   display: none;
-}
-.VideoShow{
-  width: 387px;
-  height: 200px;
 }
 
 
@@ -616,6 +613,13 @@ main {
     
   }
 
+  .videoFile{
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    top: 25px;
+  }
+
 }
   
 @media only screen and (max-width: 820px) {
@@ -694,6 +698,13 @@ main {
       width: 90vw;
     }
 
+    .videoFile{
+      width: 200px;
+      height: 200px;
+      left: 90px;
+      top: 30px;
+    }
+
    
 }
 
@@ -766,7 +777,7 @@ main {
     .videoFile{
       width: 200px;
       height: 200px;
-
+      left: -10px;
     }
 
     .grid4{
@@ -776,7 +787,7 @@ main {
 
     .grid5{
       width: 90vw;
-
+      height: max-content;
     }
 
 
