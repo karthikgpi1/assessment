@@ -5,7 +5,7 @@ const Thumbnail = () => {
   return (
     <div className="thumbnail">
       {" "}
-      <img src={require("../../Assets/video thumbnail.png")} />
+      <img src={require("../../Assets/video thumbnail.png")} alt="thumb" />
     </div>
   );
 };

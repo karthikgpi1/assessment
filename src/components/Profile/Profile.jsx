@@ -16,6 +16,7 @@ const Profile = () => {
           <img
             className="profilepic"
             src={require("../../Assets/profile-pic-01.jpg")}
+            alt="pic1"
           />
           <div className="editMain">
             <div className="edit1"></div>
@@ -41,6 +42,7 @@ const Profile = () => {
             <img
               className="userImg"
               src={require("../../Assets/profile-pic-03.jpg")}
+              alt="pic3"
             />
             <div>
               <h1 className="name">Drew James</h1>
@@ -56,6 +58,7 @@ const Profile = () => {
             <img
               className="userImg"
               src={require("../../Assets/profile-pic-02.jpg")}
+              alt="pic2"
             />
             <div>
               <h1 className="name">Bravid kames</h1>
@@ -71,6 +74,7 @@ const Profile = () => {
             <img
               className="userImg"
               src={require("../../Assets/profile-pic-04.jpg")}
+              alt="pic4"
             />
             <div>
               <h1 className="name">Bravid kames</h1>
