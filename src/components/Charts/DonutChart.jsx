@@ -10,6 +10,20 @@ export default function DonutChart() {
       },
       labels: ["france", "italy", "japan", "canada"],
 
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 280,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
+
       plotOptions: {
         pie: {
           donut: {
@@ -18,13 +32,16 @@ export default function DonutChart() {
               total: {
                 show: true,
                 // showAlways:true,
-                fontSize: 20,
+                fontSize: 15,
                 color: "#4D4F5C",
               },
             },
           },
         },
       },
+      // Chart: {
+      //   width: "100%",
+      // },
     },
 
     series: [4260, 3970, 4260, 3270],
@@ -38,7 +55,7 @@ export default function DonutChart() {
         options={data.options}
         series={data.series}
         type="donut"
-        width={370}
+        // width={370}
       />
     </div>
   );

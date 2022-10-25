@@ -6,11 +6,12 @@ export default function Areachart() {
   const [data] = useState({
     options: {
       chart: {
+        width: "100%",
         id: "basic-bar",
 
         toolbar: {
           show: true,
-          offsetX: 0,
+          offsetX: 10,
           offsetY: 0,
           tools: {
             download: false,
@@ -43,6 +44,12 @@ export default function Areachart() {
         },
       },
 
+      plotOptions: {
+        area: {
+          columnWidth: "80%",
+        },
+      },
+
       stroke: {
         width: 1,
       },
@@ -69,12 +76,7 @@ export default function Areachart() {
 
   return (
     <div className="Areachart">
-      <Chart
-        options={data.options}
-        series={data.series}
-        type="area"
-        width={377}
-      />
+      <Chart options={data.options} series={data.series}  type="area" />
     </div>
   );
 }

@@ -7,9 +7,11 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { RiHomeLine } from "react-icons/ri";
 import { BsFileBarGraph } from "react-icons/bs";
-import { IoMailOutline } from "react-icons/io5";
+// import { IoMailOutline } from "react-icons/io5";
+import { CiMail } from "react-icons/ci";
 import { CgMenuBoxed } from "react-icons/cg";
-import { IoSettingsOutline } from "react-icons/io5";
+// import { IoSettingsOutline } from "react-icons/io";
+import { CiSettings } from "react-icons/ci";
 import pic from "../../Assets/profile-pic-01.jpg";
 import Areachart from "../Charts/Areachart";
 import DonutChart from "../Charts/DonutChart";
@@ -87,7 +89,7 @@ const Sidebar = () => {
                 <span className="nav-link-name">Dashboard</span>
               </Link>
               <Link to="/inbox" className="nav-link">
-                <IoMailOutline className=" nav-link-icon" />
+                <CiMail className=" nav-link-icon" />
                 <span className="nav-link-name">Inbox</span>
                 <span className="nav-new">new</span>
               </Link>
@@ -96,7 +98,7 @@ const Sidebar = () => {
                 <span className="nav-link-name">Products</span>
               </Link>
               <Link to="/admin" className="nav-link">
-                <IoSettingsOutline className=" nav-link-icon" />
+                <CiSettings className=" nav-link-icon" />
                 <span className="nav-link-name">Admin</span>
               </Link>
             </div>
