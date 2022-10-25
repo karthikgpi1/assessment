@@ -13,6 +13,7 @@ export default function DonutChart() {
       responsive: [
         {
           breakpoint: 480,
+
           options: {
             chart: {
               width: 280,
@@ -22,8 +23,6 @@ export default function DonutChart() {
             },
           },
         },
-      ],
-      responsive: [
         {
           breakpoint: 1440,
           options: {
