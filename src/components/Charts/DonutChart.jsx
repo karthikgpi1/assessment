@@ -23,6 +23,19 @@ export default function DonutChart() {
           },
         },
       ],
+      responsive: [
+        {
+          breakpoint: 1440,
+          options: {
+            chart: {
+              width: "100%",
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
 
       plotOptions: {
         pie: {

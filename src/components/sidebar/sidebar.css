@@ -408,7 +408,7 @@ padding-right: 70px;
     width: 100%;
     background-color: var(--white-color);
     border-radius: 15px;
-    height: max-content;
+    height: 100%;
     padding: 15px;
     padding-bottom: 37px;
     cursor: crosshair; 
@@ -450,7 +450,7 @@ padding-right: 70px;
     grid-area: grid2; 
     width: 100%;
     justify-content: center;
-    height: max-content;
+    height: 100%;
     padding: 15px;
     padding-right: 15px;
     background-color: var(--white-color);
@@ -486,8 +486,8 @@ padding-right: 70px;
     width: 100%;
     border-radius: 15px;
     padding: 20px;
-    margin-top: -55px;
-    height: 100%;
+    margin-top: -0px;
+    height: max-content;
     box-shadow: 0px 1.5px 10px rgba(0,0,0,.05), 0 .5px 1px 0 rgba(0,0,0,0.1);
  
 
@@ -563,7 +563,7 @@ main {
 
 
 
-@media only screen and (max-width:1220px){
+/* @media only screen and (max-width:1220px){
   .grid4{
     margin-top: -85px;
   }
@@ -572,7 +572,7 @@ main {
   .grid4{
     margin-top: -115px;
   }
-}
+} */
 
 
 
